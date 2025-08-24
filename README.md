@@ -1,6 +1,12 @@
 MyBlogApp
 
 
+<!-- Dito natin ilalagay ang lahat ng screenshots -->
+![Products Page](https://github.com/aglucazgeorgeann-ship-it/MyBlogApp/blob/master/BLOG-APP1.jpg?raw=true)
+![Product Detail Page](https://github.com/aglucazgeorgeann-ship-it/MyBlogApp/blob/master/BLOG-APP2.jpg?raw=true)
+![Products Page](https://github.com/aglucazgeorgeann-ship-it/MyBlogApp/blob/master/BLOG-APP3.jpg?raw=true)
+![Product Detail Page](https://github.com/aglucazgeorgeann-ship-it/MyBlogApp/blob/master/BLOG-APP4.jpg?raw=true)
+
 A modern and responsive blog application designed to provide users with an intuitive platform for creating, publishing, and managing their blog posts. Share your thoughts, ideas, and stories with the world effortlessly.
 
 🚀 Features
