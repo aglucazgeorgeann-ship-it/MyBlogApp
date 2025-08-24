@@ -1,0 +1,35 @@
+<!-- app/views/comments/_comment.html.erb -->
+<div id="<%= dom_id comment %>" class="bg-gradient-to-r from-gray-50 to-white p-5 rounded-lg shadow-md border border-gray-200 animate-slide-in-left">
+  <p class="text-sm text-gray-700 mb-2">
+    <strong class="font-bold text-purple-700 text-base"><%= comment.commenter %></strong> commented
+    <span class="text-gray-500 text-xs">
+      (<% if comment.created_at.present? %><%# Kung may laman ang created_at... (If created_at has a value...) %>
+        <%= time_ago_in_words(comment.created_at) %> ago
+      <% else %><%# Kung walang laman... (If it has no value...) %>
+        Date unknown<%# Ilabas ang "Date unknown" (Display "Date unknown") %>
+      <% end %>)
+    </span>:
+  </p>
+  <p class="text-gray-800 text-base leading-relaxed mb-3"><%= comment.body %></p>
+  <div class="text-right">
+    <%= button_to "Delete Comment", [comment.post, comment], method: :delete, class: "text-red-500 hover:text-red-700 text-xs font-semibold px-3 py-1 rounded-md bg-red-50 hover:bg-red-100 transition duration-200 ease-in-out", data: { confirm: "Are you sure you want to delete this comment?" } %>
+  </div>
+</div>
+
+<style>
+/* Custom animation for comments */
+/* Custom animation para sa mga comments */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+</style>

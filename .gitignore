@@ -1,0 +1,29 @@
+# Ignore these files/directories in Git
+
+# Rails Specific
+.bundle/
+/vendor/bundle/
+/log/*.log
+/tmp/
+/public/assets # Generated assets from asset pipeline
+/public/packs # Webpacker/Shakapacker compiled assets
+/public/packs-test
+/db/*.sqlite3 # Local SQLite database file
+/db/*.sqlite3-journal
+/storage/ # Active Storage local files
+/config/master.key # !!! DO NOT UPLOAD THIS KEY !!!
+/config/credentials/development.key # Other environment keys you might use locally
+
+# Node.js specific (if you use Yarn/npm)
+/node_modules/
+/yarn-error.log
+.env # If you're using a .env file for local environment variables
+
+# Operating System Specific
+.DS_Store # macOS specific
+*.swp     # Vim swap files
+*.swo
+.byebug_history # Debugging history
+
+# Test coverage
+/coverage/
