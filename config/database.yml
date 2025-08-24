@@ -20,6 +20,13 @@ test:
   <<: *default
   database: storage/test.sqlite3
 
+# ... (iyong development at test configurations ay mananatiling SQLite3) ...
+
 production:
-  <<: *default
-  database: storage/production.sqlite3
+  # Ang <<: *default ay nag-iimport ng default settings (e.g., pool, timeout)
+  # Pero i-o-override natin ang adapter at database/url para sa PostgreSQL.
+  adapter: postgresql             # Ito ang nagsasabi sa Rails na gumamit ng PostgreSQL
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000                   # Maaari mong panatilihin ang timeout na ito
+  url: <%= ENV['DATABASE_URL'] %> # Ito ang gagamitin ng Render para sa iyong database connection
